@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // var can be re-declare and update.
+    var a=10;
+    console.log("a="+a);
+    a=20;
+    console.log("a="+a);
+    //var as the global scoped.
+    {
+        var g=100;
+        console.log("c="+g);
+    }
+    console.log("c="+g);
+    // let  cannot be re-declare but can be update.
+    let b=10;
+    console.log("b="+b);
+    b=20;
+    console.log("b="+b);
+     //var as the blocked scoped.
+     {
+        let d=100;
+        console.log("d="+d);
+        }
+        //console.log("d="+d); //error
+    // const cannot be re-declare and update.
+    const c=10;
+    console.log("c="+c);
+    //c=20; //error
+   </script>
+</body>
+</html>
