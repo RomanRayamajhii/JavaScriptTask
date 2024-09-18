@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let fruits=['appple','mango']
+    console.log(fruits);
+// push 
+    fruits.push('banana');
+    console.log(fruits);//push to end
+    fruits.push("grapes"); 
+    // sort 
+    console.log(fruits);
+    fruits.sort(); // sort array
+    console.log(fruits);
+    // pop
+    fruits.pop(); // pop from end
+    console.log(fruits);
+    // tostring
+    console.log(fruits.toString()); // convert array to string
+    // join
+    console.log(fruits.join(' ')); // convert array to string with space
+   // unshift
+    fruits.unshift("aruu"); // add to start
+    console.log(fruits);
+    // shift
+    fruits.shift(); // remove from start
+    console.log(fruits);
+    // concat
+   let food=["momo","chowmin","pizza"];
+   fruits=fruits.concat(food);
+   console.log(fruits);
+   // slice
+   console.log(fruits.slice(1,3)); // return piece of array
+   // splice (start index,deleteno of element,add new element)
+   fruits.splice(1,0,"chicken");// used to change (add,remove ,replace)
+console.log(fruits);
+
+
+</script>
+</body>
+</html>
