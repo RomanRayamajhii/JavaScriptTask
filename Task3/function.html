@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        // 1.function parameters
          function  add(a,b){
             let c=a+b;
             return c;
@@ -19,6 +20,44 @@
          }
          let d= sub(2,4);
          console.log("subtract is ",d);
+         // function with out parametars
+         function  greet(){
+            console.log("hello");
+            }
+            greet();
+            // function with one parametar
+            function  greet1(name){
+                console.log("hello "+name);
+                }
+                greet1("sai");
+                // function with multiple parametars
+                function  greet2(name,age){
+                    console.log("hello "+name+" you are "+age+" years old");
+                    }
+                    greet2("sai",25);
+                    // function with default parametars
+                    function  greet3(name="sai",age=25){
+                        console.log("hello "+name+" you are "+age+" years old");
+                        }
+                        greet3();
+                        // function with rest parametars
+                        function  greet4(name,...args){
+                            console.log("hello "+name+" you are "+args);
+                            }
+                            greet4("sai",25,30,35);
+                            // function with spread parametars
+                            function  greet5(name,...args){
+                                console.log("hello "+name+" you are "+args);
+                                }
+                                greet5("sai",25,30,35);
+                                // function with arrow function
+                                let greet6=name=>console.log("hello "+name);
+                                greet6("sai");
+                                // function with arrow function with parametars
+                                let greet7=(name,age)=>console.log("hello "+name+" you are "+age
+                                +" years old");
+                                greet7("sai",25);
+                               
 
     </script>
 </body>
