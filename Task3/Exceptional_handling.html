@@ -29,6 +29,15 @@
             }
             // 3.throw statement 
             
+            try {
+                let age = 19;
+                if (age < 18) {
+                  throw new Error("Age must be 18 or older.");
+                }
+                console.log("Access granted.");
+              } catch (error) {
+                console.log("Error: " + error.message); // Will print: "Error: Age must be 18 or older."
+              }
     </script>
 </body>
 </html>
