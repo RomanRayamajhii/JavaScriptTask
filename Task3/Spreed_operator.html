@@ -8,9 +8,18 @@
 <body>
     <script>
         // spread operator = ...allows an iterable such as an array or string to be expand into seperate elements .
+        // cpoing the array
+        let array =[1,2,3,4,5,6,7];
+        let array2=[...array];
+        console.log(array2);
+        // combining  2 or multiple arrays. 
         let fruits=["apple","bananan","orange"];
         let fruits2=[...fruits,"grapes","mango"];
         console.log(fruits2);
+        // combing the array and using join () to add some symbol after each element of array
+        let fruits3=["papaya","watermelon"]
+        let fruits4=[...fruits3,"grapes","mango"].join(" , ");
+        console.log(fruits4);
     </script>
-</body>
+</body> 
 </html>
