@@ -14,3 +14,9 @@ let mapArray=array.map((value)=>{
     // 2. square the given array
     let maparray3=array2.map(element=> element *element);
     console.log(maparray3);
+// using function 
+function square(element){
+  return element*element;
+}
+let squarearray=array.map(square);
+console.log(squarearray);
