@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1>DOM Manipulation Example</h1>
+    
+    <div id="container">
+      <p>Existing paragraph</p>
+    </div>
+
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="deleteElement()">Delete Element</button>
+    <button onclick="deleteAttribute()">Delete Attribute</button>
+    <button onclick="replace()">Replace Element</button>
+    
+    <script>
+      // Function to add a new paragraph
+      function addElement() {
+        // Create a new <p> element
+        const newElement = document.createElement("p");
+        newElement.textContent = "This is a new paragraph.";
+        newElement.setAttribute("id", "mylink");
+
+        const newElement2 = document.createElement("p");
+        newElement2.textContent = "This is a new paragraph. 2";
+        newElement2.setAttribute("id", "para2");
+
+        // Append the new element to the container
+        document.getElementById("container").appendChild(newElement);
+        document.getElementById("container").appendChild(newElement2);
+      }
+
+      // Function to delete the last paragraph
+      function deleteElement() {
+        const container = document.getElementById("container");
+        if (container.lastChild) {
+          container.removeChild(container.lastChild);
+        }
+      }
+
+      // Function to delete the 'id' attribute
+      function deleteAttribute() {
+        const link = document.getElementById("mylink");
+        if (link) {
+          link.removeAttribute("id");
+        }
+      }
+
+      // Function to replace the element
+      function replace() {
+        const oldElement = document.getElementById("mylink");
+        if (oldElement) {
+          const newReplaceElement = document.createElement("h1");
+          newReplaceElement.textContent = "This is the new replaced element!";
+          oldElement.parentNode.replaceChild(newReplaceElement, oldElement);
+        }
+      }
+    </script>
+  </body>
+</html>
