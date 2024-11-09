@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            
+        }
+        button{
+            padding: 20px;
+            font-size: larger;
+            margin:(auto,0px);
+            background-color: rgb(12, 149, 103);
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="clickfunction()">Click me 😁</button>
+    <button id="btn2" >Click me 2 😁</button>
+
+<script>
+    let button= document.getElementById("btn");
+    function clickfunction(event){
+       event.target.style.backgroundColor="tomato";
+        event.target.textContent="ouchh 🤧";
+    }
+    btn.addEventListener("click",clickfunction)
+</script>
+<script>
+  document.getElementById("btn2").addEventListener("click",function(event){
+    event.target.style.backgroundColor="tomato";
+    event.target.textContent="ouchh 2 🤧";
+  });
+    
+
+</script>
+</body>
+</html>
