@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Fruits</h1>
+    <div class="fruits">Apple</div>
+    <div class="fruits">Banana</div>
+    <div class="fruits">Cherry</div>
+    <p> This is a paragraph</p>
+    <p> This is a paragraph 2</p>
+    <h2>heading1</h2>
+    <h2>heading2</h2>
+  <h2>heading3</h2>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+    <script>
+        // getElementById selects the element with the specified id
+        const heading = document.getElementById('heading');
+        heading.style.backgroundColor = 'rgb(145, 60, 40)';
+        // getElementsByClassName selects all the elements with the specified class
+        const fruits = document.getElementsByClassName('fruits');
+        fruits[0].style.background = 'rgb(145, 60, 40)';
+       for(let fruit of fruits){
+        fruit.style.color = 'red';
+       }
+       // Get the first paragraph element
+      let paragraph= document.getElementsByTagName('p');
+       paragraph[0].style.backgroundColor = 'rgb(245, 60, 40)';
+       paragraph[0].style.color = 'white';
+       
+       // querySelector selects the first element that matches the selector
+       let headings = document.querySelector('h2');  // Selects the first <h1>
+        headings.style.backgroundColor = "blue"; 
+         // Applies background color
+         headings.style.color = 'white';
+        
+       // querySelectorAll selects all the elements that match the selector
+      let listitem= document.querySelectorAll('li');
+       for(let list of listitem){
+        list.style.backgroundColor="hsl(200, 100%, 50%)"; 
+       }
+    </script>
+</body>
+</html>
