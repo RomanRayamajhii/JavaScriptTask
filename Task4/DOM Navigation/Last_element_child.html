@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Fruits</h1>
+        <ul id="fruits">
+            <li>Apple</li>
+            <li>Banana</li>
+        </ul>
+        <h1>Vegetables
+        </h1>
+        <ul id="vegetables">
+            <li>Carrot</li>
+            <li>Broccoli</li>
+        </ul>
+        <h1 id="meat">Meats</h1>
+        <ul id="meats">
+            <li>Beef</li>
+            <li>Chicken</li>
+        </ul>
+        </div>
+        
+    
+    <script>
+        // for single ul list lastelementchild
+        const element = document.querySelector('ul');
+
+            let lastChild = element.lastElementChild;
+            lastChild.style.backgroundColor = 'rgb(45, 80, 80)';
+            lastChild.style.color="white";
+        
+            // for all  ul list lastelementchild
+            const allElements = document.querySelectorAll('ul');
+            for(let element of allElements){
+                const lastChild=element.lastElementChild;
+                lastChild.style.backgroundColor = 'rgb(45, 80, 80)';
+                lastChild.style.color="white";
+            }
+// for h1 meet
+const ulelement=document.getElementById("meats");
+const lastChild2=ulelement.lastElementChild;
+lastChild2.style.color="pink";
+    </script>
+</body>
+</html>
