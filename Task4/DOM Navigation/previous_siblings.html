@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Fruits</h1>
+        <ul id="fruits">
+            <li id="apple">Apple</li>
+            <li id="banana">Banana</li>
+            <li id="orange">orange</li>
+        </ul>
+        <h1>Vegetables
+        </h1>
+        <ul id="vegetables">
+            <li>Carrot</li>
+            <li>Broccoli</li>
+        </ul>
+        <h1 id="meat">Meats</h1>
+        <ul id="meats">
+            <li>Beef</li>
+            <li>Chicken</li>
+        </ul>
+        </div>
+        
+    
+    <script>
+        
+        const element = document.getElementById('vegetables');
+
+            let previoussibling = element.previousElementSibling;
+            previoussibling.style.backgroundColor = 'rgb(45, 80, 80)';
+            previoussibling.style.color="white";
+            {
+            const pelement = document.getElementById('orange');
+
+            let previoussibling = pelement.previousElementSibling;
+            previoussibling.style.backgroundColor = 'rgb(145, 150, 80)';
+            previoussibling.style.color="white";
+            }
+    </script>
+</body>
+</html>
