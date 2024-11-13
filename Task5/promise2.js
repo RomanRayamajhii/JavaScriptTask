@@ -30,16 +30,19 @@ function cleanroom(){
 },1000)});
 }
 function gotoCampus(){
-    return new Promise((resolve,reject)=>{setTimeout(()=>
-        {
+    return new Promise((resolve,reject)=>{
+      
             const gotoCampus=false;
             if(gotoCampus){
+                setTimeout(()=>
+                    {
             resolve("went to school 🚌");
-            }
+            },1500);
+        }
             else{
                 reject("you didn't go to school");
             }
-        },1500)});
+        });
         }
         
   
