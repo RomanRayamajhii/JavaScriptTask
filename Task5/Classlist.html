@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            }
+            button{
+                display: block;
+                margin: 10px;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                font-size: larger;
+
+            }
+            .enable{
+                color:hwb(0 51% 20%);
+                background-color: gains;
+            }
+            .my{
+                color: azure;
+                background-color: blue;
+            }
+    </style>
+
+</head>
+<body>
+
+    <button id="mybtn"> My button</button>
+    <script>
+        const buttons=document.getElementById("mybtn");
+        // adding new class name for the element
+        buttons.classList .add("enable");
+          //removing class name for element 
+        buttons.classList.remove("enable");
+      
+    </script>
+    
+    <button id="mybtn2">
+        Toggle Example
+    </button>
+    <script>
+        const buttons2=document.getElementById("mybtn2");
+        // toggle class name for the element
+        buttons2.addEventListener("mouseover",event=>{
+            buttons2.classList.toggle("my");
+        });
+        buttons2.addEventListener("mouseout",event=>{
+            buttons2.classList.toggle("my");
+        });
+       
+
+    </script>
+    <style>
+        .replace{
+            color: rgb(219, 29, 29);
+            background-color: moccasin;
+        }
+        .replaced{
+            color: rgb(0, 0, 0);
+            background-color: lime;
+        }
+    </style>
+    <button id="mybtn3">Replace Class Name</button>
+    <script>
+        let button =document.getElementById("mybtn3");
+        button.classList.add("replace");
+        button.addEventListener("click",event=>{
+            button.classList.add("replaced");
+            button.classList.replace("replace,replaced");
+        })
+        
+
+    </script>
+    <style>
+        .enable{
+            color: rgb(250, 250, 250);
+            background-color: rgb(235, 163, 38);
+        }
+        .disable{
+            color: rgb(0, 0, 0);
+            background-color: rgb(103, 154, 103);
+        }
+</style>
+<button id="mybtn4">Contains </button>
+<script>
+    let buttton =document.getElementById('mybtn4');
+    buttton.classList.add("enable");
+    buttton.addEventListener("click",event=>{
+
+        if(buttton.classList.contains("disable")){
+            buttton.textContent ="Disable ";
+        }
+        else{
+            buttton.textContent ="You looks so pretty 🌕";
+            buttton.classList.replace("enable","disable")
+        }
+    });
+</script>
+</body>
+</html>
