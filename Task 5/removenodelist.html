@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            }
+            .mybtn {
+                width: 80%;
+                height: 40px;
+                font-size: 18px;
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 10px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                }
+    </style>
+</head>
+<body>
+    <button class="mybtn">Button 1</button>
+    <button class="mybtn">Button 2</button>
+    <button class="mybtn">Button 3</button>
+    <button class="mybtn">Button 4</button>
+    <script>
+        /* node list:The NodeLists are similar to an array or HTMLCollection containing the HTML elements. All modern browsers return the node list when you use querySelectorAll() method and childNodes properties. You can traverse the NodeList as an array but can't use other array methods like map(), filter(), etc, with node lists.*/
+        // get all elements with class mybtn
+        // node list won't automatically update
+        
+   
+
+       let buttons=document.querySelectorAll('.mybtn');
+       buttons.forEach(button=>{
+        button.addEventListener("click",event =>{
+            event.target.remove();
+            buttons =document.querySelectorAll(".mybtn");
+            console.log(buttons);
+        });
+    });
+
+    </script>
+</body>
+</html>
