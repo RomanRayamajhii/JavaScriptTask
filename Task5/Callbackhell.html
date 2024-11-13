@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        callback hell: situation in js where callback are 
+        nested within other callbacks.it is difficult to read .
+        it is old pattern to handle asynchronous function.
+    Now we use promises and async/await to avoid callback hell.
+    */
+    function task1(callback){
+        setTimeout(()=>{
+            console.log("task1 completed");
+            callback();
+        },3000);
+    }
+    function task2(callback){
+        setTimeout(()=>{
+            console.log("task2 completed");
+            callback();
+            },2000);
+            }
+            function task3(callback){
+                setTimeout(()=>{
+                    console.log("task3 completed");
+                    callback();
+                    },3000);
+            }
+            task1(()=>{
+task2(()=> {
+    task3(()=>{console.log("all task completed");
+    });
+});
+            });
+           
+
+    </script>
+</body>
+</html>
